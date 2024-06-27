@@ -8,9 +8,9 @@ The goal of this project is to accurately predict the probability of each patien
 ## Evaluation Metric
 Submissions are evaluated using the multi-class logarithmic loss, calculated as follows:
 
-\[
+$$
 \text{logloss} = -\frac{1}{N}\sum_{i=1}^{N}\sum_{j=1}^{M} y_{ij} \log(p_{ij})
-\]
+$$
 
 where:
 - \(N\) is the number of rows in the test set.
