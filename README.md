@@ -15,18 +15,20 @@ $$
 where:
 - \(N\) is the number of rows in the test set.
 - \(M\) is the number of outcomes (i.e., 3).
-- \(\log\) is the natural logarithm.
-- \(y_{ij}\) is 1 if row \(i\) has the ground truth label \(j\) and 0 otherwise.
-- \(p_{ij}\) is the predicted probability that observation \(i\) belongs to class \(j\).
+- $log$ is the natural logarithm.
+- $y_{ij}$ is 1 if row $i$ has the ground truth label $j$ and 0 otherwise.
+- $p_{ij}$ is the predicted probability that observation $i$ belongs to class $j$.
 
-The submitted probabilities for a given row do not need to sum to one, as they will be rescaled prior to scoring. To avoid extremes of the log function, predicted probabilities are replaced with \(\max(\min(p, 1 - 10^{-15}), 10^{-15})\).
+The submitted probabilities for a given row do not need to sum to one, as they will be rescaled prior to scoring. To avoid extremes of the log function, predicted probabilities are replaced with $max(\min(p, 1 - 10^{-15}), 10^{-15})$.
 
 ## Submission Format
 The submission file should contain the predicted probabilities for each id in the test set, with the following format:
+```
 id,Status_C,Status_CL,Status_D
 7905,0.628084,0.034788,0.337128
 7906,0.628084,0.034788,0.337128
 7907,0.628084,0.034788,0.337128
+```
 
 ## Files
 - `train.csv`: Training dataset.
